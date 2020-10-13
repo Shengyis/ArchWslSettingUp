@@ -1,0 +1,9 @@
+[submodule "OpenBLAS"]
+	path = OpenBLAS
+	url = https://github.com/xianyi/OpenBLAS.git
+[submodule "oh-my-zsh-powerline-theme"]
+	path = oh-my-zsh-powerline-theme
+	url = https://github.com/jeremyFreeAgent/oh-my-zsh-powerline-theme.git
+[submodule "fonts"]
+	path = fonts
+	url = https://github.com/powerline/fonts.git
