@@ -12,9 +12,10 @@ set showmatch
 set selection=exclusive
 set selectmode=mouse,key
 set laststatus=2
-autocmd BufRead,BufNewFile *.md setlocal spell
 syntax on
 filetype on
+autocmd BufRead,BufNewFile *.md setlocal spell
+autocmd BufRead,BufNewFile *.md set spellcapcheck=
 
 " high light search setting
 autocmd cursorhold * set nohlsearch
