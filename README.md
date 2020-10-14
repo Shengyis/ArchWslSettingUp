@@ -1,5 +1,8 @@
 This is a collection of some useful repos for scientific computing and their install details as well as some software configuration files back up for Mac and Linux both).
 
+brew install list (not brew cask):
+	gcc, git, make, cmake, python
+
 Repos list:
 
 oh-my-zsh-powerline-theme: oh-my-zsh Powerline style Theme
