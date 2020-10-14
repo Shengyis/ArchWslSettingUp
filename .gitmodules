@@ -7,3 +7,6 @@
 [submodule "fonts"]
 	path = fonts
 	url = https://github.com/powerline/fonts.git
+[submodule "eigen"]
+	path = eigen
+	url = https://gitlab.com/libeigen/eigen.git

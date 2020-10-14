@@ -13,4 +13,6 @@ Powerline fonts: a collection of powerline fonts
 OpenBLAS: an optimized BLAS library
 	https://github.com:xianyi/OpenBLAS.git
 
+Eigen: C++ template library for linear algebra
+	https://gitlab.com/libeigen/eigen.git
 	
