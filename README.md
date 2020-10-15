@@ -1,4 +1,4 @@
-This is a collection of some useful repos for scientific computing and their install details as well as some software configuration files back up for Mac and Linux both).
+This is a collection of some useful repos for scientific computing and their install details as well as some software configuration files back up for Mac and Linux both.
 
 pre install list:
 
