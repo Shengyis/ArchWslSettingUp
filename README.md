@@ -41,4 +41,12 @@ OpenBLAS: an optimized BLAS library
 Eigen: C++ template library for linear algebra
 	
 	https://gitlab.com/libeigen/eigen.git
-	
+	--------------------------------------------------
+	cd build_dir
+	cmake ~/Repo/eigen/
+	make install
+	--------------------------------------------------
+	pkgconfig in /usr/local/share/pkgconfig/eigen3.pc
+	cmake files in /usr/lcoal/share/eigen3
+	headers in /usr/local/include/eigen3
+	--------------------------------------------------
