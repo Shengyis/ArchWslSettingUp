@@ -5,7 +5,7 @@
 export ZSH="/Users/shengyis/.oh-my-zsh"
 
 # brew bottle domain.
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
 
 # openblas with openmp setting
 export OMP_NUM_THREADS=4
