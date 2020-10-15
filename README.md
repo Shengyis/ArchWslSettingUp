@@ -43,7 +43,7 @@ Eigen: C++ template library for linear algebra
 	https://gitlab.com/libeigen/eigen.git
 	--------------------------------------------------
 	cd build_dir
-	cmake ~/Repo/eigen/
+	cmake ~/Repos/eigen/
 	make install
 	--------------------------------------------------
 	pkgconfig in /usr/local/share/pkgconfig/eigen3.pc
