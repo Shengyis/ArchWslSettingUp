@@ -25,8 +25,9 @@ OpenBLAS: an optimized BLAS library
 	https://github.com:xianyi/OpenBLAS.git
 	--------------------------------------------------
 	make USE_OPENMP=1 NUM_PARALLEL=2
-	make PREFIX=/usr/local installGenerating openblas_config.h in /usr/local/include
+	make PREFIX=/usr/local install
 	--------------------------------------------------
+	Generating openblas_config.h in /usr/local/include
 	Generating f77blas.h in /usr/local/include
 	Generating cblas.h in /usr/local/include
 	Copying LAPACKE header files to /usr/local/include
