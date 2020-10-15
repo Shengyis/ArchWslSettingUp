@@ -10,6 +10,10 @@ export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 # openblas with openmp setting
 export OMP_NUM_THREADS=4
 
+# cpp inlude and lib path
+export CPLUS_INCLUDE_PATH='/usr/local/include'
+export CPLUS_LIBRARY_PATH='/usr/local/lib'
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
