@@ -11,7 +11,7 @@ export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
 export OMP_NUM_THREADS=4
 
 # cpp inlude and lib path
-export CPLUS_INCLUDE_PATH="/usr/local/include/"
+export CPLUS_INCLUDE_PATH="/usr/local/include/:/usr/local/include/python/"
 export LIBRARY_PATH="/usr/local/lib/"
 
 # Set name of the theme to load --- if set to "random", it will
