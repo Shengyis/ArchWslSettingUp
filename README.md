@@ -50,3 +50,16 @@ Eigen: C++ template library for linear algebra
 	cmake files in /usr/lcoal/share/eigen3
 	headers in /usr/local/include/eigen3
 	--------------------------------------------------
+
+FFTW3: Fastest Fourier Transform in the West
+
+	http://www.fftw.org/
+	--------------------------------------------------
+	downloaded from the office site, their git repo is not desgined for most users
+	--------------------------------------------------
+	./config --enable-openmp
+	make
+	make install
+	--------------------------------------------------
+	headers in /usr/local/include
+	libs in /usr/local/bin
