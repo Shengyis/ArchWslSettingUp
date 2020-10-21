@@ -24,7 +24,7 @@ OpenBLAS: an optimized BLAS library
 	
 	https://github.com:xianyi/OpenBLAS.git
 	--------------------------------------------------
-	make USE_OPENMP=1 NUM_PARALLEL=2
+	make CC=gcc FC=gfortran USE_OPENMP=1 NUM_PARALLEL=2
 	make PREFIX=/usr/local install
 	--------------------------------------------------
 	Generating openblas_config.h in /usr/local/include
