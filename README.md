@@ -26,7 +26,7 @@ Powerline fonts: a collection of powerline fonts
 
 OpenBLAS: an optimized BLAS library
 	
-	https://github.com:xianyi/OpenBLAS.git
+	https://github.com/xianyi/OpenBLAS.git
 	--------------------------------------------------
 	make CC=gcc FC=gfortran USE_OPENMP=1 NUM_PARALLEL=2
 	make PREFIX=/usr/local install
