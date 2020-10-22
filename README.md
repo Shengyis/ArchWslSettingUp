@@ -1,8 +1,12 @@
 This is a collection of some useful repos for scientific computing and their install details as well as some software configuration files back up for Mac and Linux both.
 
-pre install list:
+Mac pre install list:
 
-	gcc, git, make, cmake, python
+	gcc, git, make, cmake, python, zsh
+
+Linux pre install list:
+
+	gcc, g++, gfortran, make, cmake, python3-pip, python3-matplotlib, zsh
 
 Repos list:
 
@@ -57,7 +61,7 @@ FFTW3: Fastest Fourier Transform in the West
 	--------------------------------------------------
 	downloaded from the office site, their git repo is not desgined for most users
 	--------------------------------------------------
-	./config --enable-openmp
+	./configure --enable-openmp
 	make
 	make install
 	--------------------------------------------------
