@@ -13,6 +13,9 @@ export OMP_NUM_THREADS=4
 # g++ include path
 export CPLUS_INCLUDE_PATH="/usr/include/python3.8/:/usr/local/include/cxsc/"
 
+# run-time lib path
+export LD_LIBRARY_PATH="/usr/local/lib"
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
