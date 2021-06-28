@@ -13,7 +13,7 @@ git clone https://github.com/powerline/fonts.git
 5. set c++ include path and xserver config in "~/.profile"
 ```
 # g++ include path
-export CPLUS_INCLUDE_PATH="/usr/include/python3.8/:/usr/local/include/cxsc/"
+export CPLUS_INCLUDE_PATH="/usr/include/python3.9/"
 	
 # Xsever config
 export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
