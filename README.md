@@ -1,69 +1,14 @@
-This is a collection of some useful repos for scientific computing and their install details as well as some software configuration files back up for Mac and Linux both.
+set up Ubuntu on wsl2:
 
-Mac pre install list:
-
-	gcc, git, make, cmake, python, zsh
-
-Linux pre install list:
-
-	gcc, g++, gfortran, make, cmake, python3-pip, python3-matplotlib, zsh
-
-Repos list:
-
-oh-my-zsh-powerline-theme: oh-my-zsh Powerline style Theme
-
+1. install zsh, oh-my-zsh 
+2. install powerline theme
 	https://github.com/jeremyFreeAgent/oh-my-zsh-powerline-theme.git
-	--------------------------------------------------
-	run install_in_omz.sh
-	--------------------------------------------------
-
-Powerline fonts: a collection of powerline fonts
-
+3. install powerline fonts on windows side 
 	https://github.com/powerline/fonts.git
-	--------------------------------------------------
-	run install.sh
-	--------------------------------------------------
-
-OpenBLAS: an optimized BLAS library
+4. install g++, libeigen3-dev, libfftw3-dev, libopenblas-openmp-dev, libboost-all-dev, python-dev-is-python3
+5. set c++ include path and xserver config in "~/.profile"
+	# g++ include path
+	export CPLUS_INCLUDE_PATH="/usr/include/python3.8/:/usr/local/include/cxsc/"
 	
-	https://github.com/xianyi/OpenBLAS.git
-	--------------------------------------------------
-	make CC=gcc FC=gfortran USE_OPENMP=1 NUM_PARALLEL=2
-	make PREFIX=/usr/local install
-	--------------------------------------------------
-	Generating openblas_config.h in /usr/local/include
-	Generating f77blas.h in /usr/local/include
-	Generating cblas.h in /usr/local/include
-	Copying LAPACKE header files to /usr/local/include
-	Copying the static library to /usr/local/lib
-	Copying the shared library to /usr/local/lib
-	Generating openblas.pc in /usr/local/lib/pkgconfig
-	Generating OpenBLASConfig.cmake in /usr/local/lib/cmake/openblas
-	Generating OpenBLASConfigVersion.cmake in /usr/local/lib/cmake/openblas
-	--------------------------------------------------
-
-Eigen: C++ template library for linear algebra
-	
-	https://gitlab.com/libeigen/eigen.git
-	--------------------------------------------------
-	cd build_dir
-	cmake ~/Repos/eigen/
-	make install
-	--------------------------------------------------
-	pkgconfig in /usr/local/share/pkgconfig/eigen3.pc
-	cmake files in /usr/lcoal/share/eigen3
-	headers in /usr/local/include/eigen3
-	--------------------------------------------------
-
-FFTW3: Fastest Fourier Transform in the West
-
-	http://www.fftw.org/
-	--------------------------------------------------
-	downloaded from the office site, their git repo is not desgined for most users
-	--------------------------------------------------
-	./configure --enable-openmp
-	make
-	make install
-	--------------------------------------------------
-	headers in /usr/local/include
-	libs in /usr/local/bin
+	# Xsever config
+	export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
