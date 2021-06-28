@@ -11,7 +11,7 @@ git clone https://github.com/powerline/fonts.git
 ```
 4. install packages
 ```
-sudo apt install g++ libeigen3-dev libfftw3-dev libopenblas-openmp-dev libboost-all-dev python-dev-is-python3 python3-pip
+sudo apt install g++ libeigen3-dev libfftw3-dev libopenblas-openmp-dev libboost-all-dev python-dev-is-python3 python3-pip python3-tk
 pip3 install numpy matplotlib scipy tkinter
 ```
 6. set c++ include path and xserver config in "~/.zshrc"
