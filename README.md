@@ -9,8 +9,12 @@ git clone https://github.com/jeremyFreeAgent/oh-my-zsh-powerline-theme.git
 ```
 git clone https://github.com/powerline/fonts.git
 ```
-4. install g++, libeigen3-dev, libfftw3-dev, libopenblas-openmp-dev, libboost-all-dev, python-dev-is-python3
-5. set c++ include path and xserver config in "~/.zshrc"
+4. install packages
+```
+sudo apt install g++ libeigen3-dev libfftw3-dev libopenblas-openmp-dev libboost-all-dev python-dev-is-python3 python3-pip
+pip3 install numpy matplotlib scipy tkinter
+```
+6. set c++ include path and xserver config in "~/.zshrc"
 ```
 # g++ include path
 export CPLUS_INCLUDE_PATH="/usr/include/python3.9/"
