@@ -2,9 +2,13 @@ set up Ubuntu on wsl2:
 
 1. install zsh, oh-my-zsh 
 2. install powerline theme
-`git clone https://github.com/jeremyFreeAgent/oh-my-zsh-powerline-theme.git`
+```
+git clone https://github.com/jeremyFreeAgent/oh-my-zsh-powerline-theme.git
+```
 3. install powerline fonts on windows side 
-`git clone https://github.com/powerline/fonts.git
+```
+git clone https://github.com/powerline/fonts.git
+```
 4. install g++, libeigen3-dev, libfftw3-dev, libopenblas-openmp-dev, libboost-all-dev, python-dev-is-python3`
 5. set c++ include path and xserver config in "~/.profile"
 ```
