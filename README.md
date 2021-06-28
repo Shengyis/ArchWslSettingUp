@@ -9,7 +9,7 @@ git clone https://github.com/jeremyFreeAgent/oh-my-zsh-powerline-theme.git
 ```
 git clone https://github.com/powerline/fonts.git
 ```
-4. install g++, libeigen3-dev, libfftw3-dev, libopenblas-openmp-dev, libboost-all-dev, python-dev-is-python3`
+4. install g++, libeigen3-dev, libfftw3-dev, libopenblas-openmp-dev, libboost-all-dev, python-dev-is-python3
 5. set c++ include path and xserver config in "~/.profile"
 ```
 # g++ include path
