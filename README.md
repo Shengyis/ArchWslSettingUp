@@ -18,8 +18,9 @@ git clone https://github.com/powerline/fonts.git
 sudo apt install g++ libeigen3-dev libfftw3-dev libopenblas-openmp-dev libboost-all-dev 
 sudo apt install python-dev-is-python3 python3-matplotlib python3-scipy pylint
 ```
-6. set c++ include path and xserver config in "~/.zshrc"
+6. add alias and set c++ include path and xserver config in "~/.zshrc"
 ```
+alias update="sudo apt update && sudo apt dist-upgrade -y && sudo apt autoclean && sudo apt autoremove -y"
 # g++ include path
 export CPLUS_INCLUDE_PATH="/usr/include/python3.8/:/usr/include/eigen3/"
 	
