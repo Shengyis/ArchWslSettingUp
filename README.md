@@ -27,3 +27,7 @@ export CPLUS_INCLUDE_PATH="/usr/include/python3.8/:/usr/include/eigen3/"
 # Xsever config
 export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
 ```
+7. modify the default alias ls in /etc/skel/.bashrc
+```
+alias ls='ls --color=auto -X'
+```
