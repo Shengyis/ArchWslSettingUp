@@ -20,14 +20,12 @@ sudo apt install python-dev-is-python3 python3-matplotlib python3-scipy pylint
 ```
 6. add alias and set c++ include path and xserver config in "~/.zshrc"
 ```
+# some alias
+alias lsx='ls -X'
 alias update="sudo apt update && sudo apt dist-upgrade -y && sudo apt autoclean && sudo apt autoremove -y"
 # g++ include path
 export CPLUS_INCLUDE_PATH="/usr/include/python3.8/:/usr/include/eigen3/"
 	
 # Xsever config
 export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
-```
-7. modify the default alias ls in /etc/skel/.bashrc
-```
-alias ls='ls --color=auto -X'
 ```
