@@ -33,3 +33,4 @@ export OMP_NUM_THREADS=8
 # Xsever config
 export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
 ```
+7. remove snapd and upgrade to newest version
