@@ -25,7 +25,7 @@ alias lsx='ls -X'
 alias update="sudo apt update && sudo apt dist-upgrade -y && sudo apt autoclean && sudo apt autoremove -y"
 
 # g++ include path
-export CPLUS_INCLUDE_PATH="/usr/include/python3.8/:/usr/include/eigen3/"
+export CPLUS_INCLUDE_PATH="/usr/include/python3.9/:/usr/include/eigen3/"
 
 # default omp threads
 export OMP_NUM_THREADS=8
