@@ -7,8 +7,8 @@ change Prompt=normal -> Prompt=normal
 remove snapd
 sudo do-release-upgrade
 ```
-3. install zsh
-4. install oh-my-zsh
+2. install zsh
+3. install oh-my-zsh
 ```
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
