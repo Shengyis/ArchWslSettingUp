@@ -25,6 +25,7 @@ git clone https://github.com/powerline/fonts.git
 sudo apt install libopenblas-openmp-dev
 sudo apt install g++ libeigen3-dev libfftw3-dev libboost-all-dev 
 sudo apt install python-dev-is-python3 python3-matplotlib python3-scipy pylint libsuitesparse-dev
+sudo apt install texlive-full
 ```
 7. system setting in "~/.zshrc"
 ```
