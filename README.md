@@ -39,6 +39,6 @@ export CPLUS_INCLUDE_PATH="/usr/include/python3.9/:/usr/include/eigen3/:/usr/inc
 # default omp threads
 export OMP_NUM_THREADS=8
 	
-# Xsever config
-export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
+# Xsever config, no need for latest version of wsl 2 in win11
+# export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
 ```
