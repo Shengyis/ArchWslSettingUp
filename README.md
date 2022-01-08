@@ -8,7 +8,10 @@ remove snapd
 sudo do-release-upgrade
 ```
 2. install zsh
-3. install oh-my-zsh
+```
+sudo apt install zsh
+```
+4. install oh-my-zsh
 ```
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
