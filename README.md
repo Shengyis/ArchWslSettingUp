@@ -11,7 +11,7 @@ sudo do-release-upgrade
 ```
 sudo apt install zsh
 ```
-4. install oh-my-zsh
+3. install oh-my-zsh
 ```
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
