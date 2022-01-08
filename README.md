@@ -25,6 +25,7 @@ git clone https://github.com/jeremyFreeAgent/oh-my-zsh-powerline-theme.git
 5. install powerline fonts on windows side 
 ```
 git clone https://github.com/powerline/fonts.git
+change windows terminal font to powerline type font
 ```
 6. install packages
 ```
