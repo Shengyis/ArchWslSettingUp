@@ -7,9 +7,12 @@ change Prompt=normal -> Prompt=normal
 remove snapd
 sudo do-release-upgrade
 ```
-2. install zsh
+2. install zsh and set it as defaut shell
 ```
 sudo apt install zsh
+sudo -s
+chsh -s /bin/zsh root
+chsh -s /usr/bin/zsh <usrname>
 ```
 3. install oh-my-zsh
 ```
