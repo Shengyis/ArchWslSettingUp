@@ -38,7 +38,7 @@ sudo apt install texlive-full
 ```
 # some alias
 alias lsx='ls -X'
-alias update="sudo apt update && sudo apt dist-upgrade -y && sudo apt autoclean && sudo apt autoremove -y"
+alias update="sudo apt update && sudo apt full-upgrade -y && sudo apt autoclean && sudo apt autoremove -y"
 
 # g++ include path
 export CPLUS_INCLUDE_PATH="/usr/include/python3.9/:/usr/include/eigen3/:/usr/include/suitesparse/"
