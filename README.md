@@ -9,7 +9,7 @@ usermod -aG sudo <username>
 vim /etc/wsl.conf
 
 [user]
-defaut=<username>
+default=<username>
 
 exit and at powershell side
 wsl --terminate Ubuntu
