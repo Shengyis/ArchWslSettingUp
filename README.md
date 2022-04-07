@@ -11,13 +11,13 @@ vim /etc/wsl.conf
 [user]
 default=<username>
 
+vim /etc/update-manager/release-upgrades
+check Prompt=normal -> Prompt=normal
+
 exit and at powershell side
 wsl --terminate Ubuntu
-wsl
 
-sudo vim /etc/update-manager/release-upgrades
-change Prompt=normal -> Prompt=normal
-remove snapd
+touch ~/.sudo_as_admin_successful
 sudo do-release-upgrade
 ```
 2. install zsh and set it as defaut shell
