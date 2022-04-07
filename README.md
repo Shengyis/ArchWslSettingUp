@@ -1,7 +1,19 @@
-set up Ubuntu on wsl2:
+install Ubuntu on wsl2:
 
-1. remove snapd and upgrade to newest version
+1. setting up and upgrade to newest version
 ```
+apt install sudo vim update-manager
+adduser <username>
+usermod -aG sudo <username>
+vim /etc/wsl.conf
+
+[user]
+defaut=<username>
+
+exit and at powershell side
+wsl --terminate Ubuntu
+wsl
+
 sudo vim /etc/update-manager/release-upgrades
 change Prompt=normal -> Prompt=normal
 remove snapd
