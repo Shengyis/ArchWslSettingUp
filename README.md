@@ -41,9 +41,10 @@ change windows terminal font to powerline type font
 ```
 6. install packages
 ```
+sudo apt install build-essential
 sudo apt install libopenblas-openmp-dev
-sudo apt install g++ libeigen3-dev libfftw3-dev libboost-all-dev 
-sudo apt install python-dev-is-python3 python3-matplotlib python3-scipy pylint libsuitesparse-dev
+sudo apt install libeigen3-dev libfftw3-dev libboost-all-dev libsuitesparse-dev
+sudo apt install python3-matplotlib python3-scipy python3-mpmath
 sudo apt install texlive-full
 ```
 7. system setting in "~/.zshrc"
@@ -57,7 +58,7 @@ export CPLUS_INCLUDE_PATH="/usr/include/python3.9/:/usr/include/eigen3/:/usr/inc
 
 # default omp threads
 export OMP_NUM_THREADS=8
-	
-# Xsever config, no need for latest version of wsl 2 in win11
-# export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
+
+# zsh theme setting
+ZSH_THEME="amuse"
 ```
