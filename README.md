@@ -17,7 +17,7 @@ add export RUNLEVEL=5
 source /root/.bash_rc
 apt reinstall locales dialog apt-utils vim
 
-apt install sudo curl wget git update-manager rsync
+apt install sudo curl wget git update-manager-core rsync
 adduser <username>
 usermod -aG sudo <username>
 vim /etc/wsl.conf
