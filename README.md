@@ -16,15 +16,16 @@ dpkg-reconfigure locales dialog apt-utils libpam-systemd vim man-db
 unminimize -y
 
 apt install sudo curl wget git update-manager-core rsync -y
+
+vim /etc/update-manager/release-upgrades
+check Prompt=normal -> Prompt=normal
+
 adduser <username>
 usermod -aG sudo <username>
 vim /etc/wsl.conf
 
 [user]
 default=<username>
-
-vim /etc/update-manager/release-upgrades
-check Prompt=normal -> Prompt=normal
 
 exit and at powershell side
 wsl --terminate Ubuntu
