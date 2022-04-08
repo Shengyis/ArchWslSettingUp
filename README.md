@@ -14,7 +14,7 @@ vim /root/.bashrc
 
 add export RUNLEVEL=5
 
-source /root/.bash_rc
+source /root/.bashrc
 apt reinstall locales dialog apt-utils vim
 
 apt install sudo curl wget git update-manager-core rsync
