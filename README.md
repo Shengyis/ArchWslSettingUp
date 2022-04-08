@@ -6,8 +6,13 @@ apt update
 apt install locales dialog apt-utils vim
 locale-gen en_US.UTF-8
 update-locale LANG=en_US.UTF-8
+vim /sbin/policy-rc.d
+
+change exit 101 -> exit 0
+
 apt reinstall locales dialog apt-utils vim
-apt install sudo curl wget git update-manager
+
+apt install sudo curl wget git update-manager rsync
 adduser <username>
 usermod -aG sudo <username>
 vim /etc/wsl.conf
@@ -21,7 +26,6 @@ check Prompt=normal -> Prompt=normal
 exit and at powershell side
 wsl --terminate Ubuntu
 
-touch ~/.sudo_as_admin_successful
 sudo do-release-upgrade
 ```
 2. install zsh and set it as defaut shell
@@ -45,6 +49,9 @@ sudo apt install texlive-full
 ```
 5. system setting in "~/.zshrc"
 ```
+# set runlevel
+export RUNLEVEL=5
+
 # some alias
 alias lsx='ls -X'
 alias update="sudo apt update && sudo apt full-upgrade -y && sudo apt autoclean && sudo apt autoremove -y"
