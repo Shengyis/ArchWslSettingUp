@@ -3,7 +3,7 @@ install Ubuntu on wsl2:
 1. setting up and upgrade to newest version
 ```
 apt update
-apt install locales dialog apt-utils libpam-systemd vim man-db
+apt install locales dialog apt-utils libpam-systemd vim man-db -y
 locale-gen en_US.UTF-8
 update-locale LANG=en_US.UTF-8
 vim /sbin/policy-rc.d
@@ -11,8 +11,9 @@ vim /sbin/policy-rc.d
 change exit 101 -> exit 0
 
 export RUNLEVEL=5
-apt reinstall locales dialog apt-utils libpam-systemd vim man-db
-unminimize
+apt reinstall locales dialog apt-utils libpam-systemd vim man-db -y
+dpkg-reconfigure locales dialog apt-utils libpam-systemd vim man-db
+unminimize -y
 
 apt install sudo curl wget git update-manager-core rsync
 adduser <username>
