@@ -10,6 +10,11 @@ vim /sbin/policy-rc.d
 
 change exit 101 -> exit 0
 
+vim /root/.bash_rc
+
+add export RUNLEVEL=5
+
+source /root/.bash_rc
 apt reinstall locales dialog apt-utils vim
 
 apt install sudo curl wget git update-manager rsync
