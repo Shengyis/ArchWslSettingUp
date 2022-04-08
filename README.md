@@ -10,7 +10,7 @@ vim /sbin/policy-rc.d
 
 change exit 101 -> exit 0
 
-vim /root/.bash_rc
+vim /root/.bashrc
 
 add export RUNLEVEL=5
 
