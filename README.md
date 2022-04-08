@@ -3,19 +3,15 @@ install Ubuntu on wsl2:
 1. setting up and upgrade to newest version
 ```
 apt update
-apt install locales dialog apt-utils vim
+apt install locales dialog apt-utils libpam-systemd vim
 locale-gen en_US.UTF-8
 update-locale LANG=en_US.UTF-8
 vim /sbin/policy-rc.d
 
 change exit 101 -> exit 0
 
-vim /root/.bashrc
-
-add export RUNLEVEL=5
-
-source /root/.bashrc
-apt reinstall locales dialog apt-utils vim
+export RUNLEVEL=5
+apt reinstall locales dialog apt-utils libpam-systemd vim
 
 apt install sudo curl wget git update-manager-core rsync
 adduser <username>
@@ -44,15 +40,7 @@ chsh -s /usr/bin/zsh <usrname>
 ```
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
-4. install packages
-```
-sudo apt install build-essential
-sudo apt install libopenblas-openmp-dev
-sudo apt install libeigen3-dev libfftw3-dev libboost-all-dev libsuitesparse-dev
-sudo apt install python3-matplotlib python3-scipy python3-mpmath
-sudo apt install texlive-full
-```
-5. system setting in "~/.zshrc"
+4. system setting in "~/.zshrc" and "/root/.zshrc"
 ```
 # set runlevel
 export RUNLEVEL=5
@@ -69,4 +57,12 @@ export OMP_NUM_THREADS=8
 
 # zsh theme setting
 ZSH_THEME="amuse"
+```
+5. install packages
+```
+sudo apt install build-essential
+sudo apt install libopenblas-openmp-dev
+sudo apt install libeigen3-dev libfftw3-dev libboost-all-dev libsuitesparse-dev
+sudo apt install python3-matplotlib python3-scipy python3-mpmath
+sudo apt install texlive-full
 ```
