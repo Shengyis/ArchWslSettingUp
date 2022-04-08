@@ -15,7 +15,7 @@ apt reinstall locales dialog apt-utils libpam-systemd vim man-db -y
 dpkg-reconfigure locales dialog apt-utils libpam-systemd vim man-db
 unminimize -y
 
-apt install sudo curl wget git update-manager-core rsync
+apt install sudo curl wget git update-manager-core rsync -y
 adduser <username>
 usermod -aG sudo <username>
 vim /etc/wsl.conf
@@ -33,7 +33,7 @@ sudo do-release-upgrade
 ```
 2. install zsh and set it as defaut shell
 ```
-sudo apt install zsh
+sudo apt install zsh -y
 sudo -s
 chsh -s /bin/zsh root
 chsh -s /usr/bin/zsh <usrname>
@@ -62,9 +62,9 @@ ZSH_THEME="amuse"
 ```
 5. install packages
 ```
-sudo apt install build-essential
-sudo apt install libopenblas-openmp-dev
-sudo apt install libeigen3-dev libfftw3-dev libboost-all-dev libsuitesparse-dev
-sudo apt install python3-matplotlib python3-scipy python3-mpmath
-sudo apt install texlive-full
+sudo apt install g++ -y
+sudo apt install libopenblas-openmp-dev -y
+sudo apt install libeigen3-dev libfftw3-dev libboost-all-dev libsuitesparse-dev -y
+sudo apt install python3-matplotlib python3-scipy python3-mpmath -y
+sudo apt install texlive-full -y
 ```
