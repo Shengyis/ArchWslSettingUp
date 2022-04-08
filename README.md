@@ -3,7 +3,7 @@ install Ubuntu on wsl2:
 1. setting up and upgrade to newest version
 ```
 apt update
-apt install sudo curl vim update-manager
+apt install sudo curl wget git vim update-manager
 adduser <username>
 usermod -aG sudo <username>
 vim /etc/wsl.conf
