@@ -22,10 +22,18 @@ check Prompt=normal -> Prompt=normal
 
 adduser <username>
 usermod -aG sudo <username>
+mkdir /usr/lib/wsl/lib2
+ln -s /mnt/c/Windows/System32/lxss/lib/* /usr/lib/wsl/lib2
+
 vim /etc/wsl.conf
 
 [user]
 default=<username>
+[automount]
+ldconfig=false
+
+vim /etc/ld.so.conf.d/ld.wsl.conf
+/usr/lib/wsl/lib -> /usr/lib/wsl/lib2
 
 exit and at powershell side
 wsl --terminate Ubuntu
