@@ -15,7 +15,7 @@ apt reinstall locales dialog apt-utils libpam-systemd vim man-db -y
 dpkg-reconfigure locales dialog apt-utils libpam-systemd vim man-db
 unminimize -y
 
-apt install sudo curl wget git update-manager-core lsb_core -y
+apt install sudo curl wget git update-manager-core lsb_core net-tools -y
 
 vim /etc/update-manager/release-upgrades
 check Prompt=normal -> Prompt=normal
