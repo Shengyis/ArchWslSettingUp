@@ -1,5 +1,11 @@
 install Ubuntu on wsl2:
 
+0. setting proxy
+```
+wsl_server=$(cat \/etc\/resolv.conf | grep nameserver | awk '{print $2}')":7890"
+export https_proxy='http://${wsl_server}' && export http_proxy='http://${wsl_server}' && export all_proxy='sock5://${wsl_server}'
+
+```
 1. setting up and upgrade to newest version
 ```
 apt update
@@ -59,6 +65,11 @@ export RUNLEVEL=5
 # some alias
 alias lsx='ls -X'
 alias update="sudo apt update && sudo apt full-upgrade -y && sudo apt autoclean && sudo apt autoremove -y"
+
+# set / unset proxy through windows proxy
+wsl_server=$(cat \/etc\/resolv.conf | grep nameserver | awk '{print $2}')":7890"
+alias setp="export https_proxy='http://${wsl_server}' && export http_proxy='http://${wsl_server}' && export all_proxy='sock5://${wsl_server}'"
+alias unsetp="unset https_proxy && unset http_proxy && unset all_proxy"
 
 # g++ include path
 export CPLUS_INCLUDE_PATH="/usr/include/python3.9/:/usr/include/eigen3/:/usr/include/suitesparse/"
