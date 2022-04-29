@@ -6,11 +6,11 @@ chmod +x install.sh
 ./install.sh update
 /opt/distrod/bin/distrod enable
 ```
-2. Update arch and install vim, sudo, git
+2. Update arch and install vim, sudo, git, wget
 ```
 pacman-key --init
 pacman-key --populate archlinux
-pacman -Syu vim sudo git --noconfirm
+pacman -Syu vim sudo git wget --noconfirm
 ```
 3. Add loot password and user and other setting
 ```
