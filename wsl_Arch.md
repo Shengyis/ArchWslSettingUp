@@ -67,5 +67,5 @@ ZSH_THEME="amuse"
 ```
 6. install packages
 ```
-sudo pacman -S openblas eigen fftw gcc boost suitesparse python3-matplotlib python3-scipy python3-mpmath texlive-most --noconfirm
+sudo pacman -S openblas eigen fftw gcc boost suitesparse python python-matplotlib python-scipy python-mpmath texlive-most --noconfirm
 ```
