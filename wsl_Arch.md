@@ -50,11 +50,13 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 ```
 5. setting .zshrc and .vimrc
 ```
+chmod +x .update.sh
+
 vim .zshrc
 
 # some alias
 alias lsx='ls -X'
-alias update="sudo pacman -Syu --noconfirm && sudo ${HOME}/.distrod_install.sh update && sudo pacman -Scc --noconfirm && ${HOME}/.rm_orphaned.sh"
+alias update="${HOME}/.update.sh"
 
 # g++ include path
 export CPLUS_INCLUDE_PATH="/usr/include/python3.10/:/usr/include/eigen3/:/usr/include/suitesparse/"
