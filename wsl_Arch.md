@@ -6,11 +6,11 @@ chmod +x install.sh
 ./install.sh update
 /opt/distrod/bin/distrod enable
 ```
-2. Update arch and install vim, sudo, git, wget
+2. Update arch and install vim, sudo, git, wget, system fonts
 ```
 pacman-key --init
 pacman-key --populate archlinux
-pacman -Syu vim sudo git wget --noconfirm
+pacman -Syu vim sudo git wget adobe-source-sans-fonts --noconfirm
 ```
 3. Add loot password and user and other setting
 ```
