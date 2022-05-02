@@ -1,7 +1,7 @@
 #!/usr/bin/zsh
 
 echo "\033[31m[System upgrade]\033[0m"
-echo chinasky | sudo -v
+echo ur_passwd | sudo -v
 sudo pacman -Syyu --noconfirm
 
 echo "\033[31m[Distrod update]\033[0m"
