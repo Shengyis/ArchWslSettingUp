@@ -65,9 +65,11 @@ export CPLUS_INCLUDE_PATH="/usr/include/python3.10/:/usr/include/eigen3/:/usr/in
 export OMP_NUM_THREADS=8
 
 # zsh theme setting
-ZSH_THEME="amuse"
+ZSH_THEME="avit"
 ```
 6. install packages
 ```
 sudo pacman -S openblas eigen fftw gcc boost suitesparse python tk python-matplotlib python-scipy python-mpmath adobe-source-code-pro-fonts texlive-most --noconfirm
+cd /usr/include/python3.10
+sudo ln -s ../../lib/python3.10/site-packages/numpy/core/include/numpy ./numpy
 ```
