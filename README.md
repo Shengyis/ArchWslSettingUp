@@ -59,7 +59,9 @@ alias lsx='ls -X'
 alias update="${HOME}/.update.sh"
 
 # g++ include path
-export CPLUS_INCLUDE_PATH="/usr/include/python3.10/:/usr/include/eigen3/:/usr/include/suitesparse/"
+PY_VER=3.10
+NUMPY_INCLUDE_PATH="/usr/lib/python${PY_VER}/site-packages/numpy/core/include/"
+export CPLUS_INCLUDE_PATH="/usr/include/python${PY_VER}/:${NUMPY_INCLUDE_PATH}:/usr/include/eigen3/:/usr/include/suitesparse/"
 
 # default omp threads
 export OMP_NUM_THREADS=8
@@ -70,6 +72,4 @@ ZSH_THEME="avit"
 6. install packages
 ```
 sudo pacman -S openblas eigen fftw gcc boost suitesparse python tk python-matplotlib python-scipy python-mpmath adobe-source-code-pro-fonts texlive-most --noconfirm
-cd /usr/include/python3.10
-sudo ln -s ../../lib/python3.10/site-packages/numpy/core/include/numpy ./numpy
 ```
