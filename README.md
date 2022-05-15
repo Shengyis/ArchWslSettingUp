@@ -48,11 +48,25 @@ chsh -s /usr/bin/zsh <usrname>
 # reboot
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
-5. setting .zshrc and .vimrc
+5. setting anacron weekly update, .zshrc and .vimrc
 ```
 chmod +x .update.sh
+mkdir ~/.anacron
+vim anacrontab
+
+SHELL=/usr/bin/zsh
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+RANDOM_DELAY=0
+START_HOURS_RANGE=3-22
+7 0 weekly_update $HOME/.update.sh > $TTY
 
 vim .zshrc
+
+# current terminal
+export TTY=$(tty)
+
+# check weekly update
+anacron -t ~/.anacron/anacrontab -S ~/.anacron
 
 # some alias
 alias lsx='ls -X'
