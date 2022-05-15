@@ -6,11 +6,11 @@ chmod +x install.sh
 ./install.sh update
 /opt/distrod/bin/distrod enable
 ```
-2. Update arch and install vim, sudo, git, wget, system fonts
+2. Update arch and install vim, base-devel, git, wget, cronie, system fonts
 ```
 pacman-key --init
 pacman-key --populate archlinux
-pacman -Syu vim sudo git wget adobe-source-sans-fonts --noconfirm
+pacman -Syu vim git wget adobe-source-sans-fonts cronie base-devel --noconfirm
 ```
 3. Add loot password and user and other setting
 ```
@@ -71,5 +71,12 @@ ZSH_THEME="avit"
 ```
 6. install packages
 ```
-sudo pacman -S openblas eigen fftw gcc boost suitesparse python tk python-matplotlib python-scipy python-mpmath adobe-source-code-pro-fonts texlive-most --noconfirm
+sudo pacman -S openblas eigen fftw boost suitesparse python tk python-matplotlib python-scipy python-mpmath adobe-source-code-pro-fonts texlive-most --noconfirm
+```
+7 install yay and wolframengine
+```
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -sri
+yay -S wolframengine
 ```
