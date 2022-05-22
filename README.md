@@ -62,11 +62,8 @@ START_HOURS_RANGE=3-22
 
 vim .zshrc
 
-# current terminal
-export TTY=$(tty)
-
-# check weekly update
-anacron -t ~/.anacron/anacrontab -S ~/.anacron
+# zsh theme setting
+ZSH_THEME="avit"
 
 # some alias
 alias lsx='ls -X'
@@ -80,8 +77,11 @@ export CPLUS_INCLUDE_PATH="/usr/include/python${PY_VER}/:${NUMPY_INCLUDE_PATH}:/
 # default omp threads
 export OMP_NUM_THREADS=8
 
-# zsh theme setting
-ZSH_THEME="avit"
+# current terminal
+export TTY=$(tty)
+
+# check weekly update
+anacron -t ~/.anacron/anacrontab -S ~/.anacron
 ```
 6. install packages
 ```
