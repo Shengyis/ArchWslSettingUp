@@ -1,0 +1,5 @@
+SHELL=/usr/bin/zsh
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+RANDOM_DELAY=0
+START_H0URS_RANGE=3-22
+7 0 weekly_update $HOME/.update.sh > $TTY

@@ -6,7 +6,7 @@ chmod +x install.sh
 ./install.sh update
 /opt/distrod/bin/distrod enable
 ```
-2. Update arch and install vim, base-devel, git, wget, cronie, system fonts
+2. Update arch and install vim, base-devel, git, wget, cronie, system fonts, zsh
 ```
 pacman-key --init
 pacman-key --populate archlinux
