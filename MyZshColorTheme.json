@@ -1,0 +1,21 @@
+{
+    "name": "MyZshWSL",
+    "black": "#143545",
+    "red": "#D14136",
+    "green": "#5d661b",
+    "yellow": "#A9AD2C",
+    "blue": "#4C8ED2",
+    "purple": "#4D82A4",
+    "cyan": "#59A293",
+    "white": "#EBE8DA",
+    "brightBlack": "#358FBD",
+    "brightRed": "#C9443B",
+    "brightGreen": "#C1D340",
+    "brightYellow": "#A9892C",
+    "brightBlue": "#59A9FA",
+    "brightPurple": "#858AED",
+    "brightCyan": "#78DCC8",
+    "brightWhite": "#FFFFFF",
+    "background": "#323232",
+    "foreground": "#00CFCA"
+}
