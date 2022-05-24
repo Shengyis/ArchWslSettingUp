@@ -25,5 +25,4 @@ python-scipy
 python-mpmath 
 adobe-source-code-pro-fonts 
 texlive-most 
-wolframengine
 ```
