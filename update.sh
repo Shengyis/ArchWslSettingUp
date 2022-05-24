@@ -1,7 +1,7 @@
 #!/usr/bin/zsh
 
 sleep 1
-echo chinasky | sudo -v -S
+echo password | sudo -v -S
 echo "\n"
 echo "\033[31m[Distrod update]\033[0m"
 sudo ${HOME}/.distrod_install.sh update
