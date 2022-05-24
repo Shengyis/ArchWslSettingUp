@@ -1,5 +1,8 @@
 #!/bin/bash
 
+read -p "git user.name: " gitUserName
+read -p "git user.email: " gitUserEmail
+read -p "windows user name: " winUser
 read -p "Enter your acount name: " username
 read -s -p "Enter your password: " password
 
@@ -34,6 +37,7 @@ mv /root/ArchWslSettingUp/install.sh /home//${username}/.distrod_install.sh
 cp update.sh /home/${username}/.update.sh
 cp zshrc /home/${username}/zshrc_backup
 cp vimrc /home/${username}/.vimrc
+ln -s /mnt/c/Users/${winUser}/OneDrive /home/${username}/
 cp -r /root/ArchWslSettingUp/anacron /home/${username}/.anacron
 sed -i "s/password/${password}/" /home/${username}/.update.sh
 
@@ -41,10 +45,14 @@ sed -i "s/password/${password}/" /home/${username}/.update.sh
 chown -R ${username} /home/${username}/
 chgrp -R ${username} /home/${username}/
 
-# install oh_my_zsh and enable systemd for user
+# install oh_my_zsh, set git user info and enable systemd for user
 cd /home/${username}
 su - ${username} << EOF
 sh -c $(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)
+EOF
+su - ${username} << EOF
+git config --global user.name "${gitUserName}"
+git config --global user.email "${gitUserEmail}"
 mv /home/${username}/zshrc_backup /home/${username}/.zshrc
 echo ${password} | sudo -v -S
 sudo /opt/distrod/bin/distrod enable
