@@ -13,3 +13,5 @@ set selection=exclusive
 set selectmode=mouse,key
 set laststatus=2
 syntax on
+source $VIMRUNTIME/mswin.vim
+behave mswin
