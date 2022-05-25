@@ -105,8 +105,8 @@ alias lsx='ls -X'
 alias update="${HOME}/.update.sh"
 
 # g++ include path
-PY_VER=3.10
-NUMPY_INCLUDE_PATH="/usr/lib/python${PY_VER}/site-packages/numpy/core/include/"
+PYTHON_VERSION=$(python -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')
+NUMPY_INCLUDE_PATH="/usr/lib/python${PYTHON_VERSION}/site-packages/numpy/core/include/"
 export CPLUS_INCLUDE_PATH="/usr/include/python${PY_VER}/:${NUMPY_INCLUDE_PATH}:/usr/include/eigen3/:/usr/include/suitesparse/"
 
 # default omp threads
