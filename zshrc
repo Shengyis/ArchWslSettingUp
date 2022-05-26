@@ -107,7 +107,7 @@ alias update="${HOME}/.update.sh"
 # g++ include path
 PYTHON_VERSION=$(python -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')
 NUMPY_INCLUDE_PATH="/usr/lib/python${PYTHON_VERSION}/site-packages/numpy/core/include/"
-export CPLUS_INCLUDE_PATH="/usr/include/python${PY_VER}/:${NUMPY_INCLUDE_PATH}:/usr/include/eigen3/:/usr/include/suitesparse/"
+export CPLUS_INCLUDE_PATH="/usr/include/python${PYTHON_VERSION}/:${NUMPY_INCLUDE_PATH}:/usr/include/eigen3/:/usr/include/suitesparse/"
 
 # default omp threads
 export OMP_NUM_THREADS=8
