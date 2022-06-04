@@ -59,15 +59,15 @@ sudo /opt/distrod/bin/distrod enable
 EOF
 
 # install yay
-cd /home/${username}
-su - ${username} << EOF
-echo ${password} | sudo -v -S
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -sri --noconfirm
-cd ..
-rm -rf yay
-EOF
+# cd /home/${username}
+# su - ${username} << EOF
+# echo ${password} | sudo -v -S
+# git clone https://aur.archlinux.org/yay.git
+# cd yay
+# makepkg -sri --noconfirm
+# cd ..
+# rm -rf yay
+# EOF
 
 # clean
 cd /root
@@ -79,5 +79,5 @@ rm .bash*
 #install user packages 
 su - ${username} << EOF
 echo ${password} | sudo -v -S
-yay -S openblas eigen fftw boost suitesparse python tk python-matplotlib python-scipy python-mpmath adobe-source-code-pro-fonts texlive-most --noconfirm
+pacman -S openblas eigen fftw boost suitesparse python tk python-matplotlib python-scipy python-mpmath adobe-source-code-pro-fonts texlive-most --noconfirm
 EOF
