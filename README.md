@@ -9,7 +9,7 @@ Reboot ArchLinux and login as root again then run
 cd ArchWslSettingUp
 ./settingup2.sh
 ```
-Shutdown WSL and reboot. Now you should login as normal user. Go to finish your packages setting (e.g. wolframengine, etc.).
+Shutdown WSL and reboot. Now you should login as normal user.
 
 This ArchLinux will update everything every one week. Pre-installed packages are:
 ```
