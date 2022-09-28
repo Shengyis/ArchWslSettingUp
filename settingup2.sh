@@ -14,7 +14,6 @@ echo -e "${password}\n${password}" | passwd ${username}
 # fix cuda linking files and change login user 
 mkdir /usr/lib/wsl/lib2
 ln -s /mnt/c/Windows/System32/lxss/lib/* /usr/lib/wsl/lib2
-touch /etc/wsl.conf
 echo "[user]" >> /etc/wsl.conf
 echo "default=${username}" >> /etc/wsl.conf
 echo "[automount]" >> /etc/wsl.conf
