@@ -63,5 +63,5 @@ rm .bash*
 #install user packages 
 su - ${username} << EOF
 echo ${password} | sudo -v -S
-pacman -S openblas eigen fftw boost suitesparse python tk python-matplotlib python-scipy python-mpmath adobe-source-code-pro-fonts texlive-most --noconfirm
+pacman -S openblas eigen fftw boost suitesparse python tk python-matplotlib python-scipy python-mpmath texlive-most --noconfirm
 EOF
