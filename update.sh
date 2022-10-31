@@ -14,5 +14,5 @@ orphaned_list=$(pacman -Qdqt)
 if [[ !${orphaned_list} ]] {
 	echo "No orphaned package"
 } else {
-	yay -Rsn ${orphaned_list} --noconfirm
+	pacman -Rsn ${orphaned_list} --noconfirm
 }
