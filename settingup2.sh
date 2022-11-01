@@ -27,6 +27,9 @@ localectl set-locale LANG=en_US.UTF-8
 # add CN source
 sed -i '1i Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch' /etc/pacman.d/mirrorlist
 
+# show progress bar for pacman
+sed -i '/NoProgressBar/s/^/#/' /etc/pacman.conf
+
 # Update arch and install gvim, base-devel, git, wget, cronie, system fonts, zsh
 pacman-key --init
 pacman-key --populate archlinux
