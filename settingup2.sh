@@ -2,7 +2,6 @@
 
 read -p "git user.name: " gitUserName
 read -p "git user.email: " gitUserEmail
-read -p "windows user name: " winUser
 read -p "Enter your acount name: " username
 read -s -p "Enter your password: " password
 
@@ -19,6 +18,14 @@ echo "default=${username}" >> /etc/wsl.conf
 echo "[automount]" >> /etc/wsl.conf
 echo "ldconfig=false" >> /etc/wsl.conf
 sed -i '/lib/s/$/2/' /etc/ld.so.conf.d/ld.wsl.conf
+
+# set local
+sed -i '/en_US.UTF/s/^#//' /etc/locale.gen
+locale-gen
+localectl set-locale LANG=en_US.UTF-8
+
+# add CN source
+sed -i '1i Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch' /etc/pacman.d/mirrorlist
 
 # Update arch and install gvim, base-devel, git, wget, cronie, system fonts, zsh
 pacman-key --init
@@ -42,10 +49,10 @@ sed -i "s/password/${password}/" /home/${username}/.update.sh
 chown -R ${username} /home/${username}/
 chgrp -R ${username} /home/${username}/
 
-# install oh_my_zsh, set git user info and enable systemd for user
+# install oh_my_zsh, set git user info
 cd /home/${username}
 su - ${username} << EOF
-sh -c $(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 EOF
 su - ${username} << EOF
 git config --global user.name "${gitUserName}"
