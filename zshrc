@@ -113,7 +113,7 @@ export CPLUS_INCLUDE_PATH="/usr/include/python${PYTHON_VERSION}/:${NUMPY_INCLUDE
 export OMP_NUM_THREADS=8
 
 # X11 setting
-ln -s -f /mnt/wslg/.X11-unix /tmp/.X11-unix
+# ln -s -f /mnt/wslg/.X11-unix /tmp/.X11-unix
 
 # current terminal
 export TTY=$(tty)
