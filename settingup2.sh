@@ -75,3 +75,5 @@ su - ${username} << EOF
 echo ${password} | sudo -v -S
 sudo pacman -S openblas eigen fftw boost suitesparse python tk python-matplotlib python-scipy python-mpmath texlive-most --noconfirm
 EOF
+
+echo "Setting done! Reboot and Enjoy!"
