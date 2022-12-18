@@ -55,7 +55,7 @@ chgrp -R ${username} /home/${username}/
 # install oh_my_zsh, set git user info
 cd /home/${username}
 su - ${username} << EOF
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 EOF
 su - ${username} << EOF
 git config --global user.name "${gitUserName}"
