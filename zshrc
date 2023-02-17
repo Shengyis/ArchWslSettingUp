@@ -72,6 +72,8 @@ ZSH_THEME="avit"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
+# auto update ozh and disable its prompt
+DISABLE_UPDATE_PROMPT=true
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
