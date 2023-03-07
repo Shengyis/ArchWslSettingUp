@@ -45,6 +45,7 @@ chsh -s /usr/bin/zsh ${username}
 cp update.sh /home/${username}/.update.sh
 cp zshrc /home/${username}/zshrc_backup
 cp vimrc /home/${username}/.vimrc
+cp settingup3.sh /home/${username}/settingup3.sh
 cp -r /root/ArchWslSettingUp/anacron /home/${username}/.anacron
 sed -i "s/password/${password}/" /home/${username}/.update.sh
 
@@ -55,12 +56,8 @@ chgrp -R ${username} /home/${username}/
 # install oh_my_zsh, set git user info
 cd /home/${username}
 su - ${username} << EOF
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-EOF
-su - ${username} << EOF
 git config --global user.name "${gitUserName}"
 git config --global user.email "${gitUserEmail}"
-mv /home/${username}/zshrc_backup /home/${username}/.zshrc
 EOF
 
 # clean
@@ -73,7 +70,7 @@ rm .bash*
 #install user packages 
 su - ${username} << EOF
 echo ${password} | sudo -v -S
-sudo pacman -S openblas eigen fftw boost suitesparse python tk python-matplotlib python-scipy python-mpmath texlive-most --noconfirm
+sudo pacman -S openblas eigen fftw boost suitesparse python tk python-matplotlib python-scipy python-mpmath --noconfirm
 EOF
 
-echo "Setting done! Reboot and Enjoy!"
+echo "restart and run settingup3.sh"
