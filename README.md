@@ -5,8 +5,11 @@ sudo docker run archlinux
 id=$(sudo docker ps -a | grep archlinux | awk '{print $1}')
 sudo docker export $id > /mnt/d/wsl/sys_imag/arch.tar
 ```
-
-At windows side, import ArchLinux distrod and login as root then run
+At windows side, import ArchLinux 
+```
+wsl --import Arch D:\Wsl\Arch D:\Wsl\sys_imag\arch.tar
+```
+login as root then run
 ```
 git clone https://github.com/Shengyis/ArchWslSettingUp.git
 cd ArchWslSettingUp
