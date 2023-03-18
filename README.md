@@ -1,3 +1,10 @@
+```
+docker pull archlinux
+docker run archlinux
+id=$(docker ps -a | grep archlinux | awk '{print $1}')
+docker export $id > /mnt/d/wsl/sys_imag/arch.tar
+```
+
 At windows side, import ArchLinux distrod and login as root then run
 ```
 git clone https://github.com/Shengyis/ArchWslSettingUp.git
