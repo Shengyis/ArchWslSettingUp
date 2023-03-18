@@ -1,4 +1,5 @@
 ```
+sudo systemctl start docker
 docker pull archlinux
 docker run archlinux
 id=$(docker ps -a | grep archlinux | awk '{print $1}')
