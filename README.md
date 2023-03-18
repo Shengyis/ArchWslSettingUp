@@ -2,7 +2,7 @@
 sudo systemctl start docker
 sudo docker pull archlinux
 sudo docker run archlinux
-id=$(docker ps -a | grep archlinux | awk '{print $1}')
+id=$(sudo docker ps -a | grep archlinux | awk '{print $1}')
 sudo docker export $id > /mnt/d/wsl/sys_imag/arch.tar
 ```
 
