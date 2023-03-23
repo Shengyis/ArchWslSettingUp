@@ -53,7 +53,7 @@ sed -i "s/password/${password}/" /home/${username}/.update.sh
 chown -R ${username} /home/${username}/
 chgrp -R ${username} /home/${username}/
 
-# install oh_my_zsh, set git user info
+# set git user info
 cd /home/${username}
 su - ${username} << EOF
 git config --global user.name "${gitUserName}"
