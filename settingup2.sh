@@ -70,7 +70,7 @@ rm .bash*
 #install user packages 
 su - ${username} << EOF
 echo ${password} | sudo -v -S
-sudo pacman -S blas-openblas python tk python-matplotlib python-scipy python-mpmath ghostscript popplar --noconfirm
+sudo pacman -S blas-openblas python tk python-matplotlib python-scipy python-mpmath --noconfirm
 EOF
 
 echo "restart and run settingup3.sh"
