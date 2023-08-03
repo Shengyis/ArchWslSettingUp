@@ -24,12 +24,10 @@ Shutdown WSL and reboot. Now you should login as normal user.
 
 This ArchLinux will update everything every one week. Pre-installed packages are:
 ```
-openblas 
+blas-openblas 
 python
 tk
 python-matplotlib
 python-scipy
 python-mpmath
-ghostscript 
-popplar
 ```
