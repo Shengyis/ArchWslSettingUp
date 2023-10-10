@@ -11,7 +11,7 @@ echo "\033[31m[Clear up]\033[0m"
 sudo pacman -Scc --noconfirm
 
 orphaned_list=$(pacman -Qdqt)
-if [[ !${orphaned_list} ]] {
+if [[ -v ${orphaned_list} ]] {
 	echo "No orphaned package"
 } else {
 	sudo pacman -Rsn ${orphaned_list} --noconfirm
