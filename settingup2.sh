@@ -33,7 +33,7 @@ sed -i '/NoProgressBar/s/^/#/' /etc/pacman.conf
 # Update arch and install gvim, base-devel, git, wget, cronie, system fonts, zsh
 pacman-key --init
 pacman-key --populate archlinux
-pacman -Syyu gvim git wget adobe-source-sans-fonts cronie base-devel zsh --noconfirm
+pacman -Syyu gvim git wget adobe-source-code-pro-fonts cronie base-devel zsh --noconfirm
 
 # let wheel group use sudo
 sed -i '0, /%wheel/s/^# //' /etc/sudoers
