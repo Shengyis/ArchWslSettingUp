@@ -22,7 +22,6 @@ sed -i '/lib/s/$/2/' /etc/ld.so.conf.d/ld.wsl.conf
 # set local
 sed -i '/en_US.UTF/s/^#//' /etc/locale.gen
 locale-gen
-localectl set-locale LANG=en_US.UTF-8
 
 # add CN source
 sed -i '1i Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch' /etc/pacman.d/mirrorlist
