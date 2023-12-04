@@ -31,9 +31,13 @@ echo 'Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch' >> /etc/pacman.con
 # show progress bar for pacman
 sed -i '/NoProgressBar/s/^/#/' /etc/pacman.conf
 
-# Update arch and install gvim, base-devel, git, wget, cronie, system fonts, zsh
+# update key first
+pacman -Sy
+pacman -S gnupg --noconfirm
 pacman-key --init
 pacman-key --populate archlinux
+
+# Update arch and install gvim, base-devel, git, wget, cronie, system fonts, zsh
 pacman -Syyu archlinuxcn-keyring gvim git wget adobe-source-code-pro-fonts cronie base-devel zsh --noconfirm
 
 # let wheel group use sudo
