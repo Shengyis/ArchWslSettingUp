@@ -68,7 +68,7 @@ chgrp -R ${username} /home/${username}/
 # clean
 cd /root
 rm -rf ArchWslSettingUp .cache
-rm .viminfo .bash_history
+rm .bash_history
 cd /home/${username}
 rm .bash*
 
