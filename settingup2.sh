@@ -25,6 +25,8 @@ locale-gen
 
 # add CN source
 sed -i '1i Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch' /etc/pacman.d/mirrorlist
+echo "[archlinuxcn]" >> /etc/pacman.conf
+echo 'Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch' >> /etc/pacman.conf
 
 # show progress bar for pacman
 sed -i '/NoProgressBar/s/^/#/' /etc/pacman.conf
@@ -32,7 +34,7 @@ sed -i '/NoProgressBar/s/^/#/' /etc/pacman.conf
 # Update arch and install gvim, base-devel, git, wget, cronie, system fonts, zsh
 pacman-key --init
 pacman-key --populate archlinux
-pacman -Syyu gvim git wget adobe-source-code-pro-fonts cronie base-devel zsh --noconfirm
+pacman -Syyu archlinuxcn-keyring gvim git wget adobe-source-code-pro-fonts cronie base-devel zsh --noconfirm
 
 # let wheel group use sudo
 sed -i '0, /%wheel/s/^# //' /etc/sudoers
@@ -69,7 +71,7 @@ rm .bash*
 #install user packages 
 su - ${username} << EOF
 echo ${password} | sudo -v -S
-sudo pacman -S blas-openblas blas64-openblas python tk python-matplotlib python-scipy python-mpmath --noconfirm
+sudo pacman -S blas-openblas blas64-openblas python tk python-matplotlib python-scipy python-mpmath python-cupy --noconfirm
 EOF
 
 echo "restart and run settingup3.sh"
