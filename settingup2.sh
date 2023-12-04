@@ -23,7 +23,7 @@ sed -i '/lib/s/$/2/' /etc/ld.so.conf.d/ld.wsl.conf
 sed -i '/en_US.UTF/s/^#//' /etc/locale.gen
 locale-gen
 
-# add CN source
+# add CN source and switch to archlinuxcn community
 sed -i '1i Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch' /etc/pacman.d/mirrorlist
 echo "[archlinuxcn]" >> /etc/pacman.conf
 echo 'Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch' >> /etc/pacman.conf
