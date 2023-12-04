@@ -1,7 +1,7 @@
 #!/bin/bash
 
-read -p "git user.name: " gitUserName
-read -p "git user.email: " gitUserEmail
+# read -p "git user.name: " gitUserName
+# read -p "git user.email: " gitUserEmail
 read -p "Enter your acount name: " username
 read -s -p "Enter your password: " password
 
@@ -53,11 +53,11 @@ chown -R ${username} /home/${username}/
 chgrp -R ${username} /home/${username}/
 
 # set git user info
-cd /home/${username}
-su - ${username} << EOF
-git config --global user.name "${gitUserName}"
-git config --global user.email "${gitUserEmail}"
-EOF
+# cd /home/${username}
+# su - ${username} << EOF
+# git config --global user.name "${gitUserName}"
+# git config --global user.email "${gitUserEmail}"
+# EOF
 
 # clean
 cd /root
