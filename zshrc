@@ -117,7 +117,7 @@ export OMP_NUM_THREADS=8
 
 # X11 setting, sometimes X11 do not work
 if [[ ! -f /tmp/.X11-unix/X0 ]] {
-  ln -s /mnt/wslg/.X11-unix/X0 /tmp/.X11-unix/
+  ln -sf /mnt/wslg/.X11-unix/X0 /tmp/.X11-unix/
 }
 
 # current terminal
