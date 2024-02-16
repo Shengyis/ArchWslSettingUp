@@ -36,7 +36,7 @@ pacman -Sy
 pacman -S gnupg --noconfirm
 pacman-key --init
 pacman-key --populate archlinux
-pacman -Syyu archlinux-keyring archlinuxcn-keyring --noconfirm
+pacman -Sy archlinux-keyring archlinuxcn-keyring --noconfirm
 
 # Update arch and install gvim, base-devel, git, wget, cronie, system fonts, zsh
 pacman -Syyu gvim git wget adobe-source-code-pro-fonts cronie base-devel zsh --noconfirm
