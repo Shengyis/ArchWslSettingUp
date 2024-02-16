@@ -7,7 +7,7 @@ sudo docker export $id > /mnt/d/wsl/sys_imag/arch.tar
 ```
 At windows side, import ArchLinux 
 ```
-wsl --import Arch D:\Wsl\Arch D:\Wsl\sys_imag\arch.tar
+wsl --import Arch D:\Wsl\ D:\Drive\Backup\Wsl\arch.tar
 ```
 login as root then run
 ```
