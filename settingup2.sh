@@ -5,6 +5,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 # clean
 mv -f zshrc_backup .zshrc
-rm settingup3.sh
+rm settingup2.sh
 
 echo "done restart and enjoy!"
