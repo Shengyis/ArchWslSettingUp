@@ -13,10 +13,10 @@ echo -e "${password}\n${password}" | passwd ${username}
 # fix cuda linking files and change login user 
 mkdir /usr/lib/wsl/lib2
 ln -s /mnt/c/Windows/System32/lxss/lib/* /usr/lib/wsl/lib2
+# add config to [automount]
+echo "ldconfig=false" >> /etc/wsl.conf
 echo "[user]" >> /etc/wsl.conf
 echo "default=${username}" >> /etc/wsl.conf
-echo "[automount]" >> /etc/wsl.conf
-echo "ldconfig=false" >> /etc/wsl.conf
 sed -i '/lib/s/$/2/' /etc/ld.so.conf.d/ld.wsl.conf
 
 # set local
@@ -32,14 +32,13 @@ echo 'Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch' >> /etc/pacman.con
 sed -i '/NoProgressBar/s/^/#/' /etc/pacman.conf
 
 # update key first
-pacman -Sy
-pacman -S gnupg --noconfirm
 pacman-key --init
-pacman-key --populate archlinux
+pacman-key --populate
+pacman-key --lsign-key "farseerfc@archlinux.org"
 pacman -Sy archlinux-keyring archlinuxcn-keyring --noconfirm
 
-# Update arch and install gvim, base-devel, git, wget, cronie, system fonts, zsh
-pacman -Syyu gvim git wget adobe-source-code-pro-fonts cronie base-devel zsh --noconfirm
+# Update arch and install base-devel, git, wget, cronie, system fonts, zsh
+pacman -Syyu --needed git wget adobe-source-code-pro-fonts cronie base-devel zsh --noconfirm
 
 # let wheel group use sudo
 sed -i '0, /%wheel/s/^# //' /etc/sudoers
@@ -79,4 +78,4 @@ echo ${password} | sudo -v -S
 sudo pacman -S blas-openblas blas64-openblas python tk python-matplotlib python-scipy python-mpmath python-cupy --noconfirm
 EOF
 
-echo "restart and run settingup3.sh"
+echo "restart and run settingup2.sh"
