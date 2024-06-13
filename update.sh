@@ -12,7 +12,7 @@ sudo pacman -Scc --noconfirm
 
 orphaned_list=$(pacman -Qdqt)
 if [[ -n "${orphaned_list}" ]] {
-	sudo pacman -Rsn ${orphaned_list} --noconfirm
+	sudo pacman -Qdqt | sudo -Rsn --noconfirm -
 } else {
 	echo "No orphaned package"
 }
