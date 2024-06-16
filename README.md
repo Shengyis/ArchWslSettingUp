@@ -1,6 +1,5 @@
 Install [Arch in WSL2](https://github.com/yuk7/ArchWSL)
-```
-login as root then run
+Login as root then run
 ```
 cd ~
 git clone https://github.com/Shengyis/ArchWslSettingUp.git
