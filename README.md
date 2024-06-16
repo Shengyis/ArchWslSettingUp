@@ -1,3 +1,4 @@
+This is the quick setting up script for Arch in WSL2, using zsh by default shell.
 Install [Arch in WSL2](https://github.com/yuk7/ArchWSL)
 Login as root then run
 ```
