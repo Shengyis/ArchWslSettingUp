@@ -116,8 +116,8 @@ export CPLUS_INCLUDE_PATH="/usr/include/python${PYTHON_VERSION}/:${NUMPY_INCLUDE
 export OMP_NUM_THREADS=8
 
 # X11 setting, sometimes X11 do not work
-if [[ ! -f /tmp/.X11-unix/X0 ]] {
-  ln -sf /mnt/wslg/.X11-unix/X0 /tmp/.X11-unix/
+if [[ ! -e /tmp/.X11-unix/X0 ]] {
+  ln -sf /mnt/wslg/.X11-unix/X0 /tmp/.X11-unix/X0
 }
 
 # current terminal
