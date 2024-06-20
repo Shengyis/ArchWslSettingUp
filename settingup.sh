@@ -38,7 +38,7 @@ pacman-key --lsign-key "farseerfc@archlinux.org"
 pacman -Sy archlinux-keyring archlinuxcn-keyring --noconfirm
 
 # Update arch and install base-devel, git, wget, cronie, system fonts, zsh
-pacman -Syyu --needed git wget adobe-source-code-pro-fonts cronie base-devel zsh --noconfirm
+pacman -Syyu --needed git wget adobe-source-code-pro-fonts cronie base-devel zsh gvim --noconfirm
 
 # let wheel group use sudo
 sed -i '0, /%wheel/s/^# //' /etc/sudoers
