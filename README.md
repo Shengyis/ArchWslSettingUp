@@ -7,14 +7,18 @@ git clone https://github.com/Shengyis/ArchWslSettingUp.git
 cd ArchWslSettingUp
 ./settingup.sh
 ```
-Reboot ArchLinux and login as root again then run
+Reboot ArchLinux, and enjoy. 
+Optional, install oh-my-zsh via CN mirror and set omyzsh autoupdate, install your own packages:
 ```
-cd ~/ArchWslSettingUp
-./settingup2.sh
-```
-Reboot ArchLinux, set omyzsh autoupdate, install your own packages. For example:
-```
+git clone https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git
+cd ohmyzsh/tools
+REMOTE=https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git sh install.sh
 git -C $ZSH remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git
 git -C $ZSH pull
+# setup and clean
+mv -f ~/zshrc_backup ~/.zshrc
+rm ~/settingup2.sh ~/.bash*
+rm -rf ~/ohmyzsh
+# install other packages
 sudo pacman -S blas-openblas blas64-openblas python tk python-matplotlib python-scipy python-mpmath python-cupy --noconfirm
 ```
