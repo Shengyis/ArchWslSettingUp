@@ -29,13 +29,16 @@ echo "[archlinuxcn]" >> /etc/pacman.conf
 echo 'Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch' >> /etc/pacman.conf
 
 # show progress bar for pacman
-sed -i '/NoProgressBar/s/^/#/' /etc/pacman.conf
+# sed -i '/NoProgressBar/s/^/#/' /etc/pacman.conf
 
 # update key first
 pacman-key --init
 pacman-key --populate
 pacman-key --lsign-key "farseerfc@archlinux.org"
 pacman -Sy archlinux-keyring archlinuxcn-keyring --noconfirm
+
+# remove unnecessary packages preinstalled by ArchLinux
+pacman -Rsn arch-install-scripts less nano vim --noconfirm
 
 # Update arch and install base-devel, git, wget, cronie, system fonts, zsh
 pacman -Syyu --needed git wget adobe-source-code-pro-fonts cronie base-devel zsh gvim --noconfirm
@@ -72,10 +75,4 @@ rm .bash_history
 cd /home/${username}
 rm .bash*
 
-#install user packages 
-su - ${username} << EOF
-echo ${password} | sudo -v -S
-sudo pacman -S blas-openblas blas64-openblas python tk python-matplotlib python-scipy python-mpmath python-cupy --noconfirm
-EOF
-
-echo "restart and run settingup2.sh"
+echo "restart and enjoy"
