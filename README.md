@@ -8,11 +8,14 @@ cd ArchWslSettingUp
 ./settingup.sh
 ```
 Reboot ArchLinux, and enjoy. 
-Optional, install oh-my-zsh via CN mirror and set omyzsh autoupdate, install your own packages:
+Optional, install oh-my-zsh via CN mirror:
 ```
 git clone https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git
 cd ohmyzsh/tools
 REMOTE=https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git sh install.sh
+```
+in zsh, setup autoupdate via mirror and install other packagtes:
+```
 git -C $ZSH remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git
 git -C $ZSH pull
 # setup and clean
