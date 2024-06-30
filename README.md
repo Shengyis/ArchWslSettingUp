@@ -12,4 +12,7 @@ Reboot ArchLinux and login as root again then run
 cd ~/ArchWslSettingUp
 ./settingup2.sh
 ```
-check settingup.sh to modify the pre-install package.
+Reboot ArchLinux and install your own packages. For example:
+'''
+sudo pacman -S blas-openblas blas64-openblas python tk python-matplotlib python-scipy python-mpmath python-cupy --noconfirm
+'''
