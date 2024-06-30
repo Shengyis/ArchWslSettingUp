@@ -53,7 +53,6 @@ chsh -s /usr/bin/zsh ${username}
 cp update.sh /home/${username}/.update.sh
 cp zshrc /home/${username}/zshrc_backup
 cp vimrc /home/${username}/.vimrc
-cp settingup2.sh /home/${username}/settingup2.sh
 cp -r /root/ArchWslSettingUp/anacron /home/${username}/.anacron
 sed -i "s/password/${password}/" /home/${username}/.update.sh
 
