@@ -13,6 +13,6 @@ cd ~/ArchWslSettingUp
 ./settingup2.sh
 ```
 Reboot ArchLinux and install your own packages. For example:
-'''
+```
 sudo pacman -S blas-openblas blas64-openblas python tk python-matplotlib python-scipy python-mpmath python-cupy --noconfirm
-'''
+```
